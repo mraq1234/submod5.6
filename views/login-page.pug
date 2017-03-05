@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    style
+      include style.css
+    title Logowanie ...
+  body
+    div.container
+      form#authForm.authenticationForm(action='/auth/google', method='POST')
+        label(for='login') Login: 
+        input.inputTxt(type='text', name='login')
+        br
+        label(for='password') Hasło: 
+        input.inputTxt(type='password', name='password')
+        br
+        input.btnSubmit(type='submit', value='zaloguj')
